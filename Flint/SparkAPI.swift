@@ -9,6 +9,12 @@
 import Foundation
 import Alamofire
 
-class SparkAPI {
-    static let sharedInstance = SparkAPI();
+class SparkAPI
+{
+    static let sharedAPI = SparkAPI();
+    
+    private init()
+    {
+        
+    }
 }
