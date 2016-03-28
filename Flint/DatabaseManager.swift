@@ -11,11 +11,11 @@ import CoreData
 // Workspace
 import Roxas
 
-class DatabaseManager
+public class DatabaseManager
 {
-    static let sharedManager = DatabaseManager()
+    public static let sharedManager = DatabaseManager()
     
-    let managedObjectContext: NSManagedObjectContext
+    public let managedObjectContext: NSManagedObjectContext
     
     private let privateManagedObjectContext: NSManagedObjectContext
     private let validationManagedObjectContext: NSManagedObjectContext
@@ -45,7 +45,23 @@ class DatabaseManager
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("managedObjectContextDidSave:"), name: NSManagedObjectContextDidSaveNotification, object: nil)
 
     }
-    
+}
+
+public extension DatabaseManager
+{
+    class var databaseDirectoryURL: NSURL
+    {
+        let documentsDirectoryURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).first!
+        
+        let databaseDirectoryURL = documentsDirectoryURL.URLByAppendingPathComponent("Database")
+        self.createDirectoryAtURLIfNeeded(databaseDirectoryURL)
+        
+        return databaseDirectoryURL
+    }
+}
+
+public extension DatabaseManager
+{
     func startWithCompletion(completionBlock: ((performingMigration: Bool) -> Void)?)
     {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) {
@@ -97,19 +113,6 @@ class DatabaseManager
         managedObjectContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         
         return managedObjectContext
-    }
-}
-
-extension DatabaseManager
-{
-    class var databaseDirectoryURL: NSURL
-    {
-        let documentsDirectoryURL = NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask).first!
-        
-        let databaseDirectoryURL = documentsDirectoryURL.URLByAppendingPathComponent("Database")
-        self.createDirectoryAtURLIfNeeded(databaseDirectoryURL)
-        
-        return databaseDirectoryURL
     }
 }
 
