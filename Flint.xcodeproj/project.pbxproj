@@ -7,11 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60627AFF1C8E67B200746786 /* SparkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60627AFE1C8E67B200746786 /* SparkAPI.swift */; };
+		60627B191C8E683200746786 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60627B0C1C8E680200746786 /* Alamofire.framework */; };
 		BF4516521C8E20FE00C13475 /* Flint.h in Headers */ = {isa = PBXBuildFile; fileRef = BF4516511C8E20FE00C13475 /* Flint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF7E717C1CA9E018009B0E33 /* Roxas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7E717B1CA9E018009B0E33 /* Roxas.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		60627B0B1C8E680200746786 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60627B011C8E680200746786 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		60627B0D1C8E680200746786 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60627B011C8E680200746786 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		60627B0F1C8E680200746786 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60627B011C8E680200746786 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire OSX";
+		};
+		60627B111C8E680200746786 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60627B011C8E680200746786 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire OSX Tests";
+		};
+		60627B131C8E680200746786 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60627B011C8E680200746786 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		60627B151C8E680200746786 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60627B011C8E680200746786 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		60627B171C8E680200746786 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60627B011C8E680200746786 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		60627AFE1C8E67B200746786 /* SparkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SparkAPI.swift; sourceTree = "<group>"; };
+		60627B011C8E680200746786 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = External/Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
 		BF45164E1C8E20FE00C13475 /* Flint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4516511C8E20FE00C13475 /* Flint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flint.h; sourceTree = "<group>"; };
 		BF4516531C8E20FE00C13475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -24,12 +80,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7E717C1CA9E018009B0E33 /* Roxas.framework in Frameworks */,
+				60627B191C8E683200746786 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60627B001C8E67D000746786 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				60627B011C8E680200746786 /* Alamofire.xcodeproj */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		60627B021C8E680200746786 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60627B0C1C8E680200746786 /* Alamofire.framework */,
+				60627B0E1C8E680200746786 /* Alamofire iOS Tests.xctest */,
+				60627B101C8E680200746786 /* Alamofire.framework */,
+				60627B121C8E680200746786 /* Alamofire OSX Tests.xctest */,
+				60627B141C8E680200746786 /* Alamofire.framework */,
+				60627B161C8E680200746786 /* Alamofire tvOS Tests.xctest */,
+				60627B181C8E680200746786 /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		BF4516441C8E20FE00C13475 = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				BF4516511C8E20FE00C13475 /* Flint.h */,
+				60627AFE1C8E67B200746786 /* SparkAPI.swift */,
+				60627B001C8E67D000746786 /* External */,
 				BF4516531C8E20FE00C13475 /* Info.plist */,
 			);
 			path = Flint;
@@ -120,12 +201,70 @@
 			mainGroup = BF4516441C8E20FE00C13475;
 			productRefGroup = BF45164F1C8E20FE00C13475 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 60627B021C8E680200746786 /* Products */;
+					ProjectRef = 60627B011C8E680200746786 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BF45164D1C8E20FE00C13475 /* Flint */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		60627B0C1C8E680200746786 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 60627B0B1C8E680200746786 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		60627B0E1C8E680200746786 /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = 60627B0D1C8E680200746786 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		60627B101C8E680200746786 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 60627B0F1C8E680200746786 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		60627B121C8E680200746786 /* Alamofire OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire OSX Tests.xctest";
+			remoteRef = 60627B111C8E680200746786 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		60627B141C8E680200746786 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 60627B131C8E680200746786 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		60627B161C8E680200746786 /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = 60627B151C8E680200746786 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		60627B181C8E680200746786 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 60627B171C8E680200746786 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BF45164C1C8E20FE00C13475 /* Resources */ = {
@@ -142,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60627AFF1C8E67B200746786 /* SparkAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +380,7 @@
 		BF4516571C8E20FE00C13475 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -251,12 +392,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.sparksc.Flint;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		BF4516581C8E20FE00C13475 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
