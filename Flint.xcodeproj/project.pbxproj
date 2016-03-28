@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		BF4516521C8E20FE00C13475 /* Flint.h in Headers */ = {isa = PBXBuildFile; fileRef = BF4516511C8E20FE00C13475 /* Flint.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF7E717C1CA9E018009B0E33 /* Roxas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7E717B1CA9E018009B0E33 /* Roxas.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BF45164E1C8E20FE00C13475 /* Flint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4516511C8E20FE00C13475 /* Flint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flint.h; sourceTree = "<group>"; };
 		BF4516531C8E20FE00C13475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF7E717B1CA9E018009B0E33 /* Roxas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Roxas.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Spark-gvnqxwetghmaandvymceccqffyeh/Build/Products/Debug-iphoneos/Roxas.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +23,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7E717C1CA9E018009B0E33 /* Roxas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -31,6 +34,7 @@
 			isa = PBXGroup;
 			children = (
 				BF4516501C8E20FE00C13475 /* Flint */,
+				BF7E717D1CA9E020009B0E33 /* Frameworks */,
 				BF45164F1C8E20FE00C13475 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +54,14 @@
 				BF4516531C8E20FE00C13475 /* Info.plist */,
 			);
 			path = Flint;
+			sourceTree = "<group>";
+		};
+		BF7E717D1CA9E020009B0E33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF7E717B1CA9E018009B0E33 /* Roxas.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +290,7 @@
 				BF4516581C8E20FE00C13475 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
