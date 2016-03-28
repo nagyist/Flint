@@ -87,14 +87,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		60627B001C8E67D000746786 /* External */ = {
-			isa = PBXGroup;
-			children = (
-				60627B011C8E680200746786 /* Alamofire.xcodeproj */,
-			);
-			name = External;
-			sourceTree = "<group>";
-		};
 		60627B021C8E680200746786 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				BF4516501C8E20FE00C13475 /* Flint */,
-				BF7E717D1CA9E020009B0E33 /* Frameworks */,
+				BF7E717D1CA9E020009B0E33 /* Dependencies */,
 				BF45164F1C8E20FE00C13475 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -130,19 +122,35 @@
 			isa = PBXGroup;
 			children = (
 				BF4516511C8E20FE00C13475 /* Flint.h */,
-				60627AFE1C8E67B200746786 /* SparkAPI.swift */,
-				60627B001C8E67D000746786 /* External */,
-				BF4516531C8E20FE00C13475 /* Info.plist */,
+				BF7E71881CA9E10E009B0E33 /* SparkAPI */,
+				BF7E71891CA9E11E009B0E33 /* Supporting Files */,
 			);
 			path = Flint;
 			sourceTree = "<group>";
 		};
-		BF7E717D1CA9E020009B0E33 /* Frameworks */ = {
+		BF7E717D1CA9E020009B0E33 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				60627B011C8E680200746786 /* Alamofire.xcodeproj */,
 				BF7E717B1CA9E018009B0E33 /* Roxas.framework */,
 			);
-			name = Frameworks;
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		BF7E71881CA9E10E009B0E33 /* SparkAPI */ = {
+			isa = PBXGroup;
+			children = (
+				60627AFE1C8E67B200746786 /* SparkAPI.swift */,
+			);
+			name = SparkAPI;
+			sourceTree = "<group>";
+		};
+		BF7E71891CA9E11E009B0E33 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF4516531C8E20FE00C13475 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
