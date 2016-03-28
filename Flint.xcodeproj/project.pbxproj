@@ -11,6 +11,7 @@
 		60627B191C8E683200746786 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60627B0C1C8E680200746786 /* Alamofire.framework */; };
 		BF4516521C8E20FE00C13475 /* Flint.h in Headers */ = {isa = PBXBuildFile; fileRef = BF4516511C8E20FE00C13475 /* Flint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF7E717C1CA9E018009B0E33 /* Roxas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7E717B1CA9E018009B0E33 /* Roxas.framework */; };
+		BF7E718C1CA9E20A009B0E33 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E718B1CA9E20A009B0E33 /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		BF4516511C8E20FE00C13475 /* Flint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flint.h; sourceTree = "<group>"; };
 		BF4516531C8E20FE00C13475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF7E717B1CA9E018009B0E33 /* Roxas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Roxas.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Spark-gvnqxwetghmaandvymceccqffyeh/Build/Products/Debug-iphoneos/Roxas.framework"; sourceTree = "<group>"; };
+		BF7E718B1CA9E20A009B0E33 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 			children = (
 				BF4516511C8E20FE00C13475 /* Flint.h */,
 				BF7E71881CA9E10E009B0E33 /* SparkAPI */,
+				BF7E718A1CA9E1F9009B0E33 /* Database */,
 				BF7E71891CA9E11E009B0E33 /* Supporting Files */,
 			);
 			path = Flint;
@@ -151,6 +154,14 @@
 				BF4516531C8E20FE00C13475 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF7E718A1CA9E1F9009B0E33 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				BF7E718B1CA9E20A009B0E33 /* DatabaseManager.swift */,
+			);
+			name = Database;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF7E718C1CA9E20A009B0E33 /* DatabaseManager.swift in Sources */,
 				60627AFF1C8E67B200746786 /* SparkAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
