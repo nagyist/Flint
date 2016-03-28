@@ -12,6 +12,7 @@
 		BF4516521C8E20FE00C13475 /* Flint.h in Headers */ = {isa = PBXBuildFile; fileRef = BF4516511C8E20FE00C13475 /* Flint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF7E717C1CA9E018009B0E33 /* Roxas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7E717B1CA9E018009B0E33 /* Roxas.framework */; };
 		BF7E718C1CA9E20A009B0E33 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E718B1CA9E20A009B0E33 /* DatabaseManager.swift */; };
+		BF7E71901CA9E32B009B0E33 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF7E718E1CA9E32B009B0E33 /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		BF4516531C8E20FE00C13475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF7E717B1CA9E018009B0E33 /* Roxas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Roxas.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Spark-gvnqxwetghmaandvymceccqffyeh/Build/Products/Debug-iphoneos/Roxas.framework"; sourceTree = "<group>"; };
 		BF7E718B1CA9E20A009B0E33 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		BF7E718F1CA9E32B009B0E33 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +162,17 @@
 			isa = PBXGroup;
 			children = (
 				BF7E718B1CA9E20A009B0E33 /* DatabaseManager.swift */,
+				BF7E718D1CA9E313009B0E33 /* Model */,
 			);
 			name = Database;
+			sourceTree = "<group>";
+		};
+		BF7E718D1CA9E313009B0E33 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF7E718E1CA9E32B009B0E33 /* Model.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +313,7 @@
 			files = (
 				BF7E718C1CA9E20A009B0E33 /* DatabaseManager.swift in Sources */,
 				60627AFF1C8E67B200746786 /* SparkAPI.swift in Sources */,
+				BF7E71901CA9E32B009B0E33 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +468,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF7E718E1CA9E32B009B0E33 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF7E718F1CA9E32B009B0E33 /* Model.xcdatamodel */,
+			);
+			currentVersion = BF7E718F1CA9E32B009B0E33 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BF4516451C8E20FE00C13475 /* Project object */;
 }
