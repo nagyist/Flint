@@ -13,6 +13,8 @@ class SparkAPI
 {
     static let sharedAPI = SparkAPI();
     
+    private let baseURL = NSURL(string: "http://199.19.85.8:3000")!
+    
     private init()
     {
         
