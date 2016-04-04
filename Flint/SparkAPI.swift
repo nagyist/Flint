@@ -9,9 +9,9 @@
 import Foundation
 import Alamofire
 
-class SparkAPI
+public class SparkAPI
 {
-    static let sharedAPI = SparkAPI();
+    public static let sharedAPI = SparkAPI();
     
     private let baseURL = NSURL(string: "http://199.19.85.8:3000")!
     
