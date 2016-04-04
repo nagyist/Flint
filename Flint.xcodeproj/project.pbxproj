@@ -29,6 +29,8 @@
 		BFA29C3A1CB312D5009B9875 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFA29C381CB312D5009B9875 /* Model.xcdatamodeld */; };
 		BFA29C3D1CB31605009B9875 /* _User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA29C3B1CB31605009B9875 /* _User.swift */; };
 		BFA29C3E1CB31605009B9875 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA29C3C1CB31605009B9875 /* User.swift */; };
+		BFA29C481CB31B4C009B9875 /* NSManagedObject+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA29C461CB31B4C009B9875 /* NSManagedObject+Conveniences.swift */; };
+		BFA29C491CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA29C471CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		BFA29C391CB312D5009B9875 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		BFA29C3B1CB31605009B9875 /* _User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = _User.swift; path = Model/_User.swift; sourceTree = "<group>"; };
 		BFA29C3C1CB31605009B9875 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		BFA29C461CB31B4C009B9875 /* NSManagedObject+Conveniences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Conveniences.swift"; sourceTree = "<group>"; };
+		BFA29C471CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Conveniences.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +150,7 @@
 				BF4516511C8E20FE00C13475 /* Flint.h */,
 				BF7E71881CA9E10E009B0E33 /* SparkAPI */,
 				BF7E718A1CA9E1F9009B0E33 /* Database */,
+				BFA29C451CB31B3B009B9875 /* Extensions */,
 				BF7E71891CA9E11E009B0E33 /* Supporting Files */,
 			);
 			path = Flint;
@@ -209,6 +214,15 @@
 				BFA29C3B1CB31605009B9875 /* _User.swift */,
 			);
 			name = Machine;
+			sourceTree = "<group>";
+		};
+		BFA29C451CB31B3B009B9875 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFA29C461CB31B4C009B9875 /* NSManagedObject+Conveniences.swift */,
+				BFA29C471CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,8 +384,10 @@
 				BFA29C3D1CB31605009B9875 /* _User.swift in Sources */,
 				BF7E718C1CA9E20A009B0E33 /* DatabaseManager.swift in Sources */,
 				60627AFF1C8E67B200746786 /* SparkAPI.swift in Sources */,
+				BFA29C481CB31B4C009B9875 /* NSManagedObject+Conveniences.swift in Sources */,
 				BFA29C3E1CB31605009B9875 /* User.swift in Sources */,
 				BFA29C3A1CB312D5009B9875 /* Model.xcdatamodeld in Sources */,
+				BFA29C491CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
