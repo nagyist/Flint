@@ -6,13 +6,29 @@
 	objectVersion = 47;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		BFA29C2C1CB3117E009B9875 /* Mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BFA29C361CB3117E009B9875 /* Build configuration list for PBXAggregateTarget "Mogenerator" */;
+			buildPhases = (
+				BFA29C371CB31196009B9875 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Mogenerator;
+			productName = Mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		60627AFF1C8E67B200746786 /* SparkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60627AFE1C8E67B200746786 /* SparkAPI.swift */; };
 		60627B191C8E683200746786 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60627B0C1C8E680200746786 /* Alamofire.framework */; };
 		BF4516521C8E20FE00C13475 /* Flint.h in Headers */ = {isa = PBXBuildFile; fileRef = BF4516511C8E20FE00C13475 /* Flint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF7E717C1CA9E018009B0E33 /* Roxas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7E717B1CA9E018009B0E33 /* Roxas.framework */; };
 		BF7E718C1CA9E20A009B0E33 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E718B1CA9E20A009B0E33 /* DatabaseManager.swift */; };
-		BF7E71901CA9E32B009B0E33 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF7E718E1CA9E32B009B0E33 /* Model.xcdatamodeld */; };
+		BFA29C3A1CB312D5009B9875 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFA29C381CB312D5009B9875 /* Model.xcdatamodeld */; };
+		BFA29C3D1CB31605009B9875 /* _User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA29C3B1CB31605009B9875 /* _User.swift */; };
+		BFA29C3E1CB31605009B9875 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA29C3C1CB31605009B9875 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +91,9 @@
 		BF4516531C8E20FE00C13475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF7E717B1CA9E018009B0E33 /* Roxas.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Roxas.framework; path = "../../../../Library/Developer/Xcode/DerivedData/Spark-gvnqxwetghmaandvymceccqffyeh/Build/Products/Debug-iphoneos/Roxas.framework"; sourceTree = "<group>"; };
 		BF7E718B1CA9E20A009B0E33 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
-		BF7E718F1CA9E32B009B0E33 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		BFA29C391CB312D5009B9875 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		BFA29C3B1CB31605009B9875 /* _User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = _User.swift; path = Model/_User.swift; sourceTree = "<group>"; };
+		BFA29C3C1CB31605009B9875 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,9 +188,27 @@
 		BF7E718D1CA9E313009B0E33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BF7E718E1CA9E32B009B0E33 /* Model.xcdatamodeld */,
+				BFA29C381CB312D5009B9875 /* Model.xcdatamodeld */,
+				BFA29C401CB316CB009B9875 /* Machine */,
+				BFA29C3F1CB316C4009B9875 /* Human */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		BFA29C3F1CB316C4009B9875 /* Human */ = {
+			isa = PBXGroup;
+			children = (
+				BFA29C3C1CB31605009B9875 /* User.swift */,
+			);
+			name = Human;
+			sourceTree = "<group>";
+		};
+		BFA29C401CB316CB009B9875 /* Machine */ = {
+			isa = PBXGroup;
+			children = (
+				BFA29C3B1CB31605009B9875 /* _User.swift */,
+			);
+			name = Machine;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +255,9 @@
 					BF45164D1C8E20FE00C13475 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
+					BFA29C2C1CB3117E009B9875 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 				};
 			};
 			buildConfigurationList = BF4516481C8E20FE00C13475 /* Build configuration list for PBXProject "Flint" */;
@@ -240,6 +279,7 @@
 			projectRoot = "";
 			targets = (
 				BF45164D1C8E20FE00C13475 /* Flint */,
+				BFA29C2C1CB3117E009B9875 /* Mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -306,14 +346,32 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BFA29C371CB31196009B9875 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/mogenerator -m \"Flint/Model/Model.xcdatamodeld\" -O \"Flint/Model\" --swift --template-var scalarsWhenNonOptional=true --template-path \"Flint/Model/mogenerator/templates\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF4516491C8E20FE00C13475 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA29C3D1CB31605009B9875 /* _User.swift in Sources */,
 				BF7E718C1CA9E20A009B0E33 /* DatabaseManager.swift in Sources */,
 				60627AFF1C8E67B200746786 /* SparkAPI.swift in Sources */,
-				BF7E71901CA9E32B009B0E33 /* Model.xcdatamodeld in Sources */,
+				BFA29C3E1CB31605009B9875 /* User.swift in Sources */,
+				BFA29C3A1CB312D5009B9875 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +504,20 @@
 			};
 			name = Release;
 		};
+		BFA29C2D1CB3117E009B9875 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BFA29C2E1CB3117E009B9875 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -467,16 +539,25 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		BFA29C361CB3117E009B9875 /* Build configuration list for PBXAggregateTarget "Mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFA29C2D1CB3117E009B9875 /* Debug */,
+				BFA29C2E1CB3117E009B9875 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		BF7E718E1CA9E32B009B0E33 /* Model.xcdatamodeld */ = {
+		BFA29C381CB312D5009B9875 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				BF7E718F1CA9E32B009B0E33 /* Model.xcdatamodel */,
+				BFA29C391CB312D5009B9875 /* Model.xcdatamodel */,
 			);
-			currentVersion = BF7E718F1CA9E32B009B0E33 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			currentVersion = BFA29C391CB312D5009B9875 /* Model.xcdatamodel */;
+			name = Model.xcdatamodeld;
+			path = Model/Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
