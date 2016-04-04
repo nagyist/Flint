@@ -25,7 +25,7 @@ public class DatabaseManager
     
     private init()
     {
-        let modelURL = NSBundle.mainBundle().URLForResource("Model", withExtension: "momd")
+        let modelURL = NSBundle(forClass: DatabaseManager.self).URLForResource("Model", withExtension: "momd")
         let managedObjectModel = NSManagedObjectModel(contentsOfURL: modelURL!)
         let persistentStoreCoordinator = NSPersistentStoreCoordinator(managedObjectModel: managedObjectModel!)
         
