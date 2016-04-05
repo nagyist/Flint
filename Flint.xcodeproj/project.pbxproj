@@ -23,6 +23,12 @@
 /* Begin PBXBuildFile section */
 		60627AFF1C8E67B200746786 /* SparkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60627AFE1C8E67B200746786 /* SparkAPI.swift */; };
 		60627B191C8E683200746786 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60627B0C1C8E680200746786 /* Alamofire.framework */; };
+		BE58D5551CB34A000022D82C /* _NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58D5531CB34A000022D82C /* _NewsItem.swift */; };
+		BE58D5561CB34A000022D82C /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58D5541CB34A000022D82C /* NewsItem.swift */; };
+		BE58D55B1CB34C4D0022D82C /* _Committee.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58D5571CB34C4D0022D82C /* _Committee.swift */; };
+		BE58D55C1CB34C4D0022D82C /* _Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58D5581CB34C4D0022D82C /* _Event.swift */; };
+		BE58D55D1CB34C4D0022D82C /* Committee.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58D5591CB34C4D0022D82C /* Committee.swift */; };
+		BE58D55E1CB34C4D0022D82C /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58D55A1CB34C4D0022D82C /* Event.swift */; };
 		BF4516521C8E20FE00C13475 /* Flint.h in Headers */ = {isa = PBXBuildFile; fileRef = BF4516511C8E20FE00C13475 /* Flint.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF7E717C1CA9E018009B0E33 /* Roxas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7E717B1CA9E018009B0E33 /* Roxas.framework */; };
 		BF7E718C1CA9E20A009B0E33 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7E718B1CA9E20A009B0E33 /* DatabaseManager.swift */; };
@@ -88,6 +94,12 @@
 /* Begin PBXFileReference section */
 		60627AFE1C8E67B200746786 /* SparkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SparkAPI.swift; sourceTree = "<group>"; };
 		60627B011C8E680200746786 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = External/Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
+		BE58D5531CB34A000022D82C /* _NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = _NewsItem.swift; path = Model/_NewsItem.swift; sourceTree = "<group>"; };
+		BE58D5541CB34A000022D82C /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsItem.swift; path = Model/NewsItem.swift; sourceTree = "<group>"; };
+		BE58D5571CB34C4D0022D82C /* _Committee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = _Committee.swift; path = Model/_Committee.swift; sourceTree = "<group>"; };
+		BE58D5581CB34C4D0022D82C /* _Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = _Event.swift; path = Model/_Event.swift; sourceTree = "<group>"; };
+		BE58D5591CB34C4D0022D82C /* Committee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Committee.swift; path = Model/Committee.swift; sourceTree = "<group>"; };
+		BE58D55A1CB34C4D0022D82C /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Model/Event.swift; sourceTree = "<group>"; };
 		BF45164E1C8E20FE00C13475 /* Flint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Flint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4516511C8E20FE00C13475 /* Flint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Flint.h; sourceTree = "<group>"; };
 		BF4516531C8E20FE00C13475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -203,6 +215,9 @@
 		BFA29C3F1CB316C4009B9875 /* Human */ = {
 			isa = PBXGroup;
 			children = (
+				BE58D5541CB34A000022D82C /* NewsItem.swift */,
+				BE58D5591CB34C4D0022D82C /* Committee.swift */,
+				BE58D55A1CB34C4D0022D82C /* Event.swift */,
 				BFA29C3C1CB31605009B9875 /* User.swift */,
 			);
 			name = Human;
@@ -211,6 +226,9 @@
 		BFA29C401CB316CB009B9875 /* Machine */ = {
 			isa = PBXGroup;
 			children = (
+				BE58D5571CB34C4D0022D82C /* _Committee.swift */,
+				BE58D5581CB34C4D0022D82C /* _Event.swift */,
+				BE58D5531CB34A000022D82C /* _NewsItem.swift */,
 				BFA29C3B1CB31605009B9875 /* _User.swift */,
 			);
 			name = Machine;
@@ -382,12 +400,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA29C3D1CB31605009B9875 /* _User.swift in Sources */,
+				BE58D55D1CB34C4D0022D82C /* Committee.swift in Sources */,
+				BE58D55B1CB34C4D0022D82C /* _Committee.swift in Sources */,
 				BF7E718C1CA9E20A009B0E33 /* DatabaseManager.swift in Sources */,
 				60627AFF1C8E67B200746786 /* SparkAPI.swift in Sources */,
+				BE58D55C1CB34C4D0022D82C /* _Event.swift in Sources */,
 				BFA29C481CB31B4C009B9875 /* NSManagedObject+Conveniences.swift in Sources */,
 				BFA29C3E1CB31605009B9875 /* User.swift in Sources */,
+				BE58D5551CB34A000022D82C /* _NewsItem.swift in Sources */,
 				BFA29C3A1CB312D5009B9875 /* Model.xcdatamodeld in Sources */,
+				BE58D5561CB34A000022D82C /* NewsItem.swift in Sources */,
 				BFA29C491CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift in Sources */,
+				BE58D55E1CB34C4D0022D82C /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +586,7 @@
 				BFA29C2E1CB3117E009B9875 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
