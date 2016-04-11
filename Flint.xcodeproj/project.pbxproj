@@ -40,6 +40,7 @@
 		BFCFEFAC1CBC444000C317D0 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCFEFAB1CBC444000C317D0 /* ResponseParser.swift */; };
 		BFCFEFAE1CBC4B1200C317D0 /* UserParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCFEFAD1CBC4B1200C317D0 /* UserParser.swift */; };
 		BFCFEFB01CBC698C00C317D0 /* SparkAPI+Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCFEFAF1CBC698C00C317D0 /* SparkAPI+Users.swift */; };
+		BFCFEFB21CBC6D6800C317D0 /* NSDateFormatter+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCFEFB11CBC6D6800C317D0 /* NSDateFormatter+ISO8601.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		BFCFEFAB1CBC444000C317D0 /* ResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		BFCFEFAD1CBC4B1200C317D0 /* UserParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserParser.swift; sourceTree = "<group>"; };
 		BFCFEFAF1CBC698C00C317D0 /* SparkAPI+Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SparkAPI+Users.swift"; sourceTree = "<group>"; };
+		BFCFEFB11CBC6D6800C317D0 /* NSDateFormatter+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateFormatter+ISO8601.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 			children = (
 				BFA29C461CB31B4C009B9875 /* NSManagedObject+Conveniences.swift */,
 				BFA29C471CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift */,
+				BFCFEFB11CBC6D6800C317D0 /* NSDateFormatter+ISO8601.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				BFA29C491CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift in Sources */,
 				BE58D55E1CB34C4D0022D82C /* Event.swift in Sources */,
 				BFCFEFAC1CBC444000C317D0 /* ResponseParser.swift in Sources */,
+				BFCFEFB21CBC6D6800C317D0 /* NSDateFormatter+ISO8601.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
