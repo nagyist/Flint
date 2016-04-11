@@ -107,4 +107,19 @@ public extension SparkAPI
             
         }
     }
+    
+    func removeUser(user: User, completion: (Bool, NSError?) -> Void)
+    {
+        var identifier: Int32! = nil
+        
+        user.managedObjectContext?.performBlockAndWait({ 
+            identifier = user.identifier
+        })
+        
+        let URL = self.baseURL + "/users/" + String(identifier)
+        
+        Alamofire.request(.DELETE, URL).validate().response { (request, response, data, error) in
+            completion(error == nil, error)
+        }
+    }
 }
