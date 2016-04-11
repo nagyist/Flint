@@ -37,6 +37,8 @@
 		BFA29C3E1CB31605009B9875 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA29C3C1CB31605009B9875 /* User.swift */; };
 		BFA29C481CB31B4C009B9875 /* NSManagedObject+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA29C461CB31B4C009B9875 /* NSManagedObject+Conveniences.swift */; };
 		BFA29C491CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA29C471CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift */; };
+		BFCFEFAC1CBC444000C317D0 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCFEFAB1CBC444000C317D0 /* ResponseParser.swift */; };
+		BFCFEFAE1CBC4B1200C317D0 /* UserParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCFEFAD1CBC4B1200C317D0 /* UserParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		BFA29C3C1CB31605009B9875 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
 		BFA29C461CB31B4C009B9875 /* NSManagedObject+Conveniences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+Conveniences.swift"; sourceTree = "<group>"; };
 		BFA29C471CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Conveniences.swift"; sourceTree = "<group>"; };
+		BFCFEFAB1CBC444000C317D0 /* ResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
+		BFCFEFAD1CBC4B1200C317D0 /* UserParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,7 @@
 				BF4516511C8E20FE00C13475 /* Flint.h */,
 				BF7E71881CA9E10E009B0E33 /* SparkAPI */,
 				BF7E718A1CA9E1F9009B0E33 /* Database */,
+				BFCFEFA31CBC425800C317D0 /* Parsers */,
 				BFA29C451CB31B3B009B9875 /* Extensions */,
 				BF7E71891CA9E11E009B0E33 /* Supporting Files */,
 			);
@@ -241,6 +246,15 @@
 				BFA29C471CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		BFCFEFA31CBC425800C317D0 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				BFCFEFAB1CBC444000C317D0 /* ResponseParser.swift */,
+				BFCFEFAD1CBC4B1200C317D0 /* UserParser.swift */,
+			);
+			name = Parsers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA29C3D1CB31605009B9875 /* _User.swift in Sources */,
+				BFCFEFAE1CBC4B1200C317D0 /* UserParser.swift in Sources */,
 				BE58D55D1CB34C4D0022D82C /* Committee.swift in Sources */,
 				BE58D55B1CB34C4D0022D82C /* _Committee.swift in Sources */,
 				BF7E718C1CA9E20A009B0E33 /* DatabaseManager.swift in Sources */,
@@ -412,6 +427,7 @@
 				BE58D5561CB34A000022D82C /* NewsItem.swift in Sources */,
 				BFA29C491CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift in Sources */,
 				BE58D55E1CB34C4D0022D82C /* Event.swift in Sources */,
+				BFCFEFAC1CBC444000C317D0 /* ResponseParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

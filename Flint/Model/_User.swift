@@ -12,6 +12,7 @@ public enum UserAttributes: String
     case minors
     case name
     case organizations
+    case uscID
 }
 
 public enum UserRelationships: String
@@ -35,6 +36,8 @@ public class _User: NSManagedObject
     @NSManaged public var name: String
 
     @NSManaged public var organizations: [String]
+
+    @NSManaged public var uscID: Int64
 
     // MARK: - Relationships
 

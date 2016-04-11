@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Xcode 7.0">
     <entity name="Committee" representedClassName="Committee" syncable="YES">
         <attribute name="committeeDescription" attributeType="String" syncable="YES"/>
         <attribute name="identifier" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -42,12 +42,13 @@
                 <entry key="attributeValueClassName" value="[String]"/>
             </userInfo>
         </attribute>
+        <attribute name="uscID" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="events" toMany="YES" deletionRule="Nullify" destinationEntity="Event" inverseName="attendees" inverseEntity="Event" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="150"/>
-        <element name="NewsItem" positionX="-63" positionY="27" width="128" height="120"/>
         <element name="Committee" positionX="-54" positionY="45" width="128" height="120"/>
         <element name="Event" positionX="-36" positionY="72" width="128" height="150"/>
+        <element name="NewsItem" positionX="-63" positionY="27" width="128" height="120"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="165"/>
     </elements>
 </model>
