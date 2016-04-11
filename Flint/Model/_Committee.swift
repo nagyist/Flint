@@ -30,65 +30,9 @@ public class _Committee: NSManagedObject
 
     // MARK: - Relationships
 
-    @NSManaged public var events: NSSet
+    @NSManaged public var events: Set<Event>
 
-    @NSManaged public var newsItems: NSSet
-
-}
-
-extension _Committee {
-
-    func addEvents(objects: NSSet) {
-        let mutable = self.events.mutableCopy() as! NSMutableSet
-        mutable.unionSet(objects as Set<NSObject>)
-        self.events = mutable.copy() as! NSSet
-    }
-
-    func removeEvents(objects: NSSet) {
-        let mutable = self.events.mutableCopy() as! NSMutableSet
-        mutable.minusSet(objects as Set<NSObject>)
-        self.events = mutable.copy() as! NSSet
-    }
-
-    func addEventsObject(value: Event) {
-        let mutable = self.events.mutableCopy() as! NSMutableSet
-        mutable.addObject(value)
-        self.events = mutable.copy() as! NSSet
-    }
-
-    func removeEventsObject(value: Event) {
-        let mutable = self.events.mutableCopy() as! NSMutableSet
-        mutable.removeObject(value)
-        self.events = mutable.copy() as! NSSet
-    }
-
-}
-
-extension _Committee {
-
-    func addNewsItems(objects: NSSet) {
-        let mutable = self.newsItems.mutableCopy() as! NSMutableSet
-        mutable.unionSet(objects as Set<NSObject>)
-        self.newsItems = mutable.copy() as! NSSet
-    }
-
-    func removeNewsItems(objects: NSSet) {
-        let mutable = self.newsItems.mutableCopy() as! NSMutableSet
-        mutable.minusSet(objects as Set<NSObject>)
-        self.newsItems = mutable.copy() as! NSSet
-    }
-
-    func addNewsItemsObject(value: NewsItem) {
-        let mutable = self.newsItems.mutableCopy() as! NSMutableSet
-        mutable.addObject(value)
-        self.newsItems = mutable.copy() as! NSSet
-    }
-
-    func removeNewsItemsObject(value: NewsItem) {
-        let mutable = self.newsItems.mutableCopy() as! NSMutableSet
-        mutable.removeObject(value)
-        self.newsItems = mutable.copy() as! NSSet
-    }
+    @NSManaged public var newsItems: Set<NewsItem>
 
 }
 

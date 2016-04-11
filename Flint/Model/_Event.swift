@@ -36,65 +36,9 @@ public class _Event: NSManagedObject
 
     // MARK: - Relationships
 
-    @NSManaged public var attendees: NSSet
+    @NSManaged public var attendees: Set<User>
 
-    @NSManaged public var committees: NSSet
-
-}
-
-extension _Event {
-
-    func addAttendees(objects: NSSet) {
-        let mutable = self.attendees.mutableCopy() as! NSMutableSet
-        mutable.unionSet(objects as Set<NSObject>)
-        self.attendees = mutable.copy() as! NSSet
-    }
-
-    func removeAttendees(objects: NSSet) {
-        let mutable = self.attendees.mutableCopy() as! NSMutableSet
-        mutable.minusSet(objects as Set<NSObject>)
-        self.attendees = mutable.copy() as! NSSet
-    }
-
-    func addAttendeesObject(value: User) {
-        let mutable = self.attendees.mutableCopy() as! NSMutableSet
-        mutable.addObject(value)
-        self.attendees = mutable.copy() as! NSSet
-    }
-
-    func removeAttendeesObject(value: User) {
-        let mutable = self.attendees.mutableCopy() as! NSMutableSet
-        mutable.removeObject(value)
-        self.attendees = mutable.copy() as! NSSet
-    }
-
-}
-
-extension _Event {
-
-    func addCommittees(objects: NSSet) {
-        let mutable = self.committees.mutableCopy() as! NSMutableSet
-        mutable.unionSet(objects as Set<NSObject>)
-        self.committees = mutable.copy() as! NSSet
-    }
-
-    func removeCommittees(objects: NSSet) {
-        let mutable = self.committees.mutableCopy() as! NSMutableSet
-        mutable.minusSet(objects as Set<NSObject>)
-        self.committees = mutable.copy() as! NSSet
-    }
-
-    func addCommitteesObject(value: Committee) {
-        let mutable = self.committees.mutableCopy() as! NSMutableSet
-        mutable.addObject(value)
-        self.committees = mutable.copy() as! NSSet
-    }
-
-    func removeCommitteesObject(value: Committee) {
-        let mutable = self.committees.mutableCopy() as! NSMutableSet
-        mutable.removeObject(value)
-        self.committees = mutable.copy() as! NSSet
-    }
+    @NSManaged public var committees: Set<Committee>
 
 }
 

@@ -32,35 +32,7 @@ public class _NewsItem: NSManagedObject
 
     // MARK: - Relationships
 
-    @NSManaged public var committees: NSSet
-
-}
-
-extension _NewsItem {
-
-    func addCommittees(objects: NSSet) {
-        let mutable = self.committees.mutableCopy() as! NSMutableSet
-        mutable.unionSet(objects as Set<NSObject>)
-        self.committees = mutable.copy() as! NSSet
-    }
-
-    func removeCommittees(objects: NSSet) {
-        let mutable = self.committees.mutableCopy() as! NSMutableSet
-        mutable.minusSet(objects as Set<NSObject>)
-        self.committees = mutable.copy() as! NSSet
-    }
-
-    func addCommitteesObject(value: Committee) {
-        let mutable = self.committees.mutableCopy() as! NSMutableSet
-        mutable.addObject(value)
-        self.committees = mutable.copy() as! NSSet
-    }
-
-    func removeCommitteesObject(value: Committee) {
-        let mutable = self.committees.mutableCopy() as! NSMutableSet
-        mutable.removeObject(value)
-        self.committees = mutable.copy() as! NSSet
-    }
+    @NSManaged public var committees: Set<Committee>
 
 }
 

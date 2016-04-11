@@ -76,7 +76,7 @@ public class _<$sanitizedManagedObjectClassName$>: NSManagedObject
     // MARK: - Relationships
 <$foreach Relationship noninheritedRelationships do$>
 <$if Relationship.isToMany$>
-    @NSManaged public var <$Relationship.name$>: <$Relationship.immutableCollectionClassName$>
+    @NSManaged public var <$Relationship.name$>: Set<<$Relationship.destinationEntity.sanitizedManagedObjectClassName$>>
 
 <$else$>
     @NSManaged public var <$Relationship.name$>: <$Relationship.destinationEntity.sanitizedManagedObjectClassName$><$if Relationship.isOptional$>?<$endif$>
@@ -153,7 +153,9 @@ public class _<$sanitizedManagedObjectClassName$>: NSManagedObject
 <$endforeach do$>
 }
 
-<$foreach Relationship noninheritedRelationships do$><$if Relationship.isToMany$>
+<$foreach Relationship noninheritedRelationships do$>
+<$if Relationship.isToMany$>
+<$if Relationship.jr_isOrdered$>
 extension _<$sanitizedManagedObjectClassName$> {
 
     func add<$Relationship.name.initialCapitalString$>(objects: <$Relationship.immutableCollectionClassName$>) {
@@ -181,4 +183,6 @@ extension _<$sanitizedManagedObjectClassName$> {
     }
 
 }
-<$endif$><$endforeach do$>
+<$endif$>
+<$endif$>
+<$endforeach do$>

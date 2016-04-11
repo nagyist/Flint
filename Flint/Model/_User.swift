@@ -38,35 +38,7 @@ public class _User: NSManagedObject
 
     // MARK: - Relationships
 
-    @NSManaged public var events: NSSet
-
-}
-
-extension _User {
-
-    func addEvents(objects: NSSet) {
-        let mutable = self.events.mutableCopy() as! NSMutableSet
-        mutable.unionSet(objects as Set<NSObject>)
-        self.events = mutable.copy() as! NSSet
-    }
-
-    func removeEvents(objects: NSSet) {
-        let mutable = self.events.mutableCopy() as! NSMutableSet
-        mutable.minusSet(objects as Set<NSObject>)
-        self.events = mutable.copy() as! NSSet
-    }
-
-    func addEventsObject(value: Event) {
-        let mutable = self.events.mutableCopy() as! NSMutableSet
-        mutable.addObject(value)
-        self.events = mutable.copy() as! NSSet
-    }
-
-    func removeEventsObject(value: Event) {
-        let mutable = self.events.mutableCopy() as! NSMutableSet
-        mutable.removeObject(value)
-        self.events = mutable.copy() as! NSSet
-    }
+    @NSManaged public var events: Set<Event>
 
 }
 
