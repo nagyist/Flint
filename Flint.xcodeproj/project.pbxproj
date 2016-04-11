@@ -39,6 +39,7 @@
 		BFA29C491CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA29C471CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift */; };
 		BFCFEFAC1CBC444000C317D0 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCFEFAB1CBC444000C317D0 /* ResponseParser.swift */; };
 		BFCFEFAE1CBC4B1200C317D0 /* UserParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCFEFAD1CBC4B1200C317D0 /* UserParser.swift */; };
+		BFCFEFB01CBC698C00C317D0 /* SparkAPI+Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCFEFAF1CBC698C00C317D0 /* SparkAPI+Users.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		BFA29C471CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+Conveniences.swift"; sourceTree = "<group>"; };
 		BFCFEFAB1CBC444000C317D0 /* ResponseParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		BFCFEFAD1CBC4B1200C317D0 /* UserParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserParser.swift; sourceTree = "<group>"; };
+		BFCFEFAF1CBC698C00C317D0 /* SparkAPI+Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SparkAPI+Users.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				60627AFE1C8E67B200746786 /* SparkAPI.swift */,
+				BFCFEFAF1CBC698C00C317D0 /* SparkAPI+Users.swift */,
 			);
 			name = SparkAPI;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				BF7E718C1CA9E20A009B0E33 /* DatabaseManager.swift in Sources */,
 				60627AFF1C8E67B200746786 /* SparkAPI.swift in Sources */,
 				BE58D55C1CB34C4D0022D82C /* _Event.swift in Sources */,
+				BFCFEFB01CBC698C00C317D0 /* SparkAPI+Users.swift in Sources */,
 				BFA29C481CB31B4C009B9875 /* NSManagedObject+Conveniences.swift in Sources */,
 				BFA29C3E1CB31605009B9875 /* User.swift in Sources */,
 				BE58D5551CB34A000022D82C /* _NewsItem.swift in Sources */,
