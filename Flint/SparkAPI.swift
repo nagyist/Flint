@@ -48,8 +48,35 @@ public extension SparkAPI
             // Parse the JSON into User objects
             let users = parser.parsedObjectsFromJSONArray(JSON)
             
-            // Return the parsed users to the user via the callback closure
-            completion(users, nil)
+            // Always make sure to call callback from within a performBlock to ensure Core Data doesn't get mad at us
+            managedObjectContext.performBlock({
+                
+                // Return the parsed users to the user via the callback closure
+                completion(users, nil)
+            })
+        }
+    }
+    
+    func fetchUsersWithIdentifiers(identifiers: Set<Int>, completion: ([User]?, NSError?) -> Void)
+    {
+        let URL = self.baseURL + "/users"
+        
+        Alamofire.request(.GET, URL, parameters: ["id": Array(identifiers)], encoding: .URL, headers: nil).validate().responseJSON { (response) in
+            
+            guard let JSON = response.result.value as? [[String: AnyObject]] else {
+                completion(nil, response.result.error)
+                return
+            }
+            
+            let managedObjectContext = DatabaseManager.sharedManager.backgroundManagedObjectContext()
+            
+            let parser = UserParser(managedObjectContext: managedObjectContext)
+            
+            let users = parser.parsedObjectsFromJSONArray(JSON)
+            
+            managedObjectContext.performBlock({
+                completion(users, nil)
+            })
         }
     }
 }
