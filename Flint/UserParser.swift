@@ -20,10 +20,10 @@ public class UserParser: ResponseParser
     
     public func buildManagedObject(user: User, withJSONObject object: [String : AnyObject])
     {
-        user.identifier = Int32(object["id"] as! Int)
+        user.identifier = (object["id"] as! NSNumber).intValue
         user.name = object["name"] as! String
         user.email = object["email"] as! String
-        user.uscID = Int64(object["usc_id"] as! Int)
+        user.uscID = (object["usc_id"] as! NSNumber).longLongValue
         
         for major in object["majors"] as! [String]
         {
