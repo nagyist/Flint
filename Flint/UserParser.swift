@@ -24,20 +24,23 @@ public class UserParser: ResponseParser
         user.name = object["name"] as! String
         user.email = object["email"] as! String
         user.uscID = (object["usc_id"] as! NSNumber).longLongValue
+        user.majors = object["majors"] as! [String]
+        user.minors = object["minors"] as! [String]
+        user.organizations = object["organizations"] as! [String]
+    }
+    
+    public func buildJSONObjectWithManagedObject(user: User) -> [String: AnyObject]
+    {
+        var object = [String: AnyObject]()
         
-        for major in object["majors"] as! [String]
-        {
-            user.majors.append(major)
-        }
+        object["id"] = NSNumber(int: user.identifier)
+        object["name"] = user.name
+        object["email"] = user.email
+        object["usc_id"] = NSNumber(longLong: user.uscID)
+        object["majors"] = user.majors
+        object["minors"] = user.minors
+        object["organizations"] = user.organizations
         
-        for minor in object["minors"] as! [String]
-        {
-            user.minors.append(minor)
-        }
-        
-        for organization in object["organizations"] as! [String]
-        {
-            user.organizations.append(organization)
-        }
+        return object
     }
 }

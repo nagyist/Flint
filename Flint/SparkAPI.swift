@@ -77,6 +77,34 @@ public extension SparkAPI
             managedObjectContext.performBlock({
                 completion(users, nil)
             })
+            
+        }
+    }
+    
+    func addUser(user: User, completion: (User?, NSError?) -> Void)
+    {
+        let URL = self.baseURL + "/users"
+        
+        let parser = UserParser(managedObjectContext: user.managedObjectContext!)
+        let parameters = parser.parsedJSONObjectFromManagedObject(user)
+        
+        Alamofire.request(.POST, URL, parameters: parameters, encoding: .JSON, headers: nil).validate().responseJSON { (response) in
+            
+            guard let JSON = response.result.value as? [String: AnyObject] else {
+                completion(nil, response.result.error)
+                return
+            }
+            
+            let managedObjectContext = DatabaseManager.sharedManager.backgroundManagedObjectContext()
+            
+            let parser = UserParser(managedObjectContext: managedObjectContext)
+            
+            let user = parser.parsedObjectFromJSONObject(JSON)
+            
+            managedObjectContext.performBlock({
+                completion(user, nil)
+            })
+            
         }
     }
 }

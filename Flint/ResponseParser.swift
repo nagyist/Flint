@@ -18,7 +18,10 @@ public protocol ResponseParser
     func parsedObjectFromJSONObject(object: [String: AnyObject]) -> ParsedObject
     func parsedObjectsFromJSONArray(array: [[String: AnyObject]]) -> [ParsedObject]
     
+    func parsedJSONObjectFromManagedObject(managedObject: ParsedObject) -> [String: AnyObject]
+    
     func buildManagedObject(managedObject: ParsedObject, withJSONObject object: [String: AnyObject])
+    func buildJSONObjectWithManagedObject(managedObject: ParsedObject) -> [String: AnyObject]
 }
 
 public extension ResponseParser
@@ -46,5 +49,16 @@ public extension ResponseParser
         }
         
         return parsedObjects
+    }
+    
+    func parsedJSONObjectFromManagedObject(managedObject: ParsedObject) -> [String: AnyObject]
+    {
+        var JSONObject: [String: AnyObject]!
+        
+        self.managedObjectContext.performBlockAndWait { 
+            JSONObject = self.buildJSONObjectWithManagedObject(managedObject)
+        }
+        
+        return JSONObject
     }
 }
