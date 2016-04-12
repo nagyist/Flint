@@ -23,6 +23,8 @@
 /* Begin PBXBuildFile section */
 		60627AFF1C8E67B200746786 /* SparkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60627AFE1C8E67B200746786 /* SparkAPI.swift */; };
 		60627B191C8E683200746786 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60627B0C1C8E680200746786 /* Alamofire.framework */; };
+		BE0299B31CBC7F8700A9D447 /* CommitteeParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0299B21CBC7F8700A9D447 /* CommitteeParser.swift */; };
+		BE0299BC1CBC821600A9D447 /* SparkAPI+Committees.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0299BB1CBC821600A9D447 /* SparkAPI+Committees.swift */; };
 		BE58D5551CB34A000022D82C /* _NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58D5531CB34A000022D82C /* _NewsItem.swift */; };
 		BE58D5561CB34A000022D82C /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58D5541CB34A000022D82C /* NewsItem.swift */; };
 		BE58D55B1CB34C4D0022D82C /* _Committee.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58D5571CB34C4D0022D82C /* _Committee.swift */; };
@@ -98,6 +100,8 @@
 /* Begin PBXFileReference section */
 		60627AFE1C8E67B200746786 /* SparkAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SparkAPI.swift; sourceTree = "<group>"; };
 		60627B011C8E680200746786 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = External/Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
+		BE0299B21CBC7F8700A9D447 /* CommitteeParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitteeParser.swift; sourceTree = "<group>"; };
+		BE0299BB1CBC821600A9D447 /* SparkAPI+Committees.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SparkAPI+Committees.swift"; sourceTree = "<group>"; };
 		BE58D5531CB34A000022D82C /* _NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = _NewsItem.swift; path = Model/_NewsItem.swift; sourceTree = "<group>"; };
 		BE58D5541CB34A000022D82C /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsItem.swift; path = Model/NewsItem.swift; sourceTree = "<group>"; };
 		BE58D5571CB34C4D0022D82C /* _Committee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = _Committee.swift; path = Model/_Committee.swift; sourceTree = "<group>"; };
@@ -191,6 +195,7 @@
 			children = (
 				60627AFE1C8E67B200746786 /* SparkAPI.swift */,
 				BFCFEFAF1CBC698C00C317D0 /* SparkAPI+Users.swift */,
+				BE0299BB1CBC821600A9D447 /* SparkAPI+Committees.swift */,
 			);
 			name = SparkAPI;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			children = (
 				BFCFEFAB1CBC444000C317D0 /* ResponseParser.swift */,
 				BFCFEFAD1CBC4B1200C317D0 /* UserParser.swift */,
+				BE0299B21CBC7F8700A9D447 /* CommitteeParser.swift */,
 			);
 			name = Parsers;
 			sourceTree = "<group>";
@@ -432,7 +438,9 @@
 				BE58D5551CB34A000022D82C /* _NewsItem.swift in Sources */,
 				BFA29C3A1CB312D5009B9875 /* Model.xcdatamodeld in Sources */,
 				BE58D5561CB34A000022D82C /* NewsItem.swift in Sources */,
+				BE0299BC1CBC821600A9D447 /* SparkAPI+Committees.swift in Sources */,
 				BFA29C491CB31B4C009B9875 /* NSManagedObjectContext+Conveniences.swift in Sources */,
+				BE0299B31CBC7F8700A9D447 /* CommitteeParser.swift in Sources */,
 				BE58D55E1CB34C4D0022D82C /* Event.swift in Sources */,
 				BFCFEFAC1CBC444000C317D0 /* ResponseParser.swift in Sources */,
 				BFCFEFB21CBC6D6800C317D0 /* NSDateFormatter+ISO8601.swift in Sources */,
